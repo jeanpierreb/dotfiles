@@ -42,49 +42,39 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
 
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
-
-# Install other useful binaries.
-brew install ack
-#brew install exiv2
+#Basic System Packages
 brew install git
 brew install git-lfs
-brew install imagemagick --with-webp
-brew install lua
-brew install lynx
-brew install p7zip
-brew install pigz
-brew install pv
 brew install rename
 brew install rhino
-brew install speedtest_cli
-brew install ssh-copy-id
 brew install tree
-brew install webkit2png
-brew install zopfli
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vagrant-manager
 
-# Remove outdated versions from the cellar.
+#Install Quick Lookup
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlprettypatch
+brew cask install quicklook-csv
+brew cask install betterzipql
+brew cask install webpquicklook
+brew cask install suspicious-package
+
+# Download OSX Apps
+brew cask install airmail
+brew cask install alfred
+brew cask install appcleaner
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install google-hangouts
+brew cask install sublime-text
+brew cask install superduper
+brew cask install totalfinder
+brew cask install vlc
+
+brew prune
 brew cleanup
