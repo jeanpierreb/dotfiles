@@ -31,19 +31,18 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 #### manual run
 * `.osx` - run on a fresh osx machine
-* `.brew` - homebrew intialization
+* `.brew` - homebrew intialization witih cask
 
 #### git, brah
 * `.git`
 * `.gitattributes`
 * `.gitconfig`
 * `.gitignore`
-
 * `.inputrc` - config for bash readline
 
 
 ## Installation
 
 ```bash
-git clone https://github.com/jeanpierreb/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone https://github.com/jeanpierreb/dotfiles.git .dotfiles && cd .dotfiles && source bootstrap.sh
 ```
