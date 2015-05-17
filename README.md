@@ -1,4 +1,13 @@
-# Jean-Pierre's dotfiles.
+```
+                      .___      __    _____.__.__
+                    __| _/_____/  |__/ ____\__|  |   ____   ______
+                   / __ |/  _ \   __\   __\|  |  | _/ __ \ /  ___/
+                  / /_/ (  <_> )  |  |  |  |  |  |_\  ___/ \___ \
+                  \____ |\____/|__|  |__|  |__|____/\___  >____  >
+                       \/                               \/     \/
+
+            This repository contains personal dotfiles of Jean-Pierre
+```
 
 This repo contains my personal dotfiles and are heavily influenced by [Addy Osmani](https://github.com/addyosmani/dotfiles)'s, [Paul Irish](https://github.com/paulirish/dotfiles/)'s, and [Mathias](https://github.com/mathiasbynens/dotfiles/)'s.
 
