@@ -13,6 +13,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Code"
 alias g="git"
+alias nah="git reset --hard;git clean -df;"
 alias h="history"
 
 # Vagrant Shortcuts
