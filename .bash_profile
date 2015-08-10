@@ -1,13 +1,13 @@
 # Experimental Brew FIX from Brew Doctor
 # Should make it so that /usr/bin is after /usr/local/bin
-echo export PATH='/usr/local/bin:$PATH' >> ~/.bash_profile
-echo export PATH='/usr/local/sbin:$PATH' >> ~/.bash_profile
+# echo export PATH='/usr/local/bin:$PATH' >> ~/.bash_profile
+# echo export PATH='/usr/local/sbin:$PATH' >> ~/.bash_profile
 
 
 # Add `~/bin` to the `$PATH`
 export PATH=$HOME/bin:$PATH
-export PATH=$HOME/.node/bin:$PATH
-export PATH=$HOME/.composer/vendor/bin:$PATH
+# export PATH=$HOME/.node/bin:$PATH
+# export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # export PATH=$PATH/usr/bin:/etc:/path/to/dir:
 # sudo ln -s /usr/local/packer packer
