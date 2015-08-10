@@ -5,13 +5,13 @@ echo export PATH='/usr/local/sbin:$PATH' >> ~/.bash_profile
 
 
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
+export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.node/bin:$PATH
-export PATH="~/.composer/vendor/bin:$PATH"
+export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # export PATH=$PATH/usr/bin:/etc:/path/to/dir:
 # sudo ln -s /usr/local/packer packer
-export PATH=$PATH/usr/bin:/etc:/usr/local/packer:
+# export PATH=$PATH/usr/bin:/etc:/usr/local/packer:
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
