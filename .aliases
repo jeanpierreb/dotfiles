@@ -6,6 +6,29 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
+alias c="clear" # Typing the whole word is annoying
+
+# Laravel rules
+alias pa="php artisan"
+alias par="php artisan routes"
+alias pam="php artisan migrate"
+alias pam:r="php artisan migrate:refresh"
+alias pam:roll="php artisan migrate:rollback"
+alias pam:rs="php artisan migrate:refresh --seed"
+alias pda="php artisan dumpautoload"
+alias cu="composer update"
+alias ci="composer install"
+alias cda="composer dump-autoload -o"
+
+alias v='vagrant version && vagrant global-status'
+alias vst='vagrant status'
+alias vup='vagrant up'
+alias vdo='vagrant halt'
+alias vssh='vagrant ssh'
+alias vkill='vagrant destroy'
+alias hup='homestead up'
+alias hssh='homestead ssh'
+
 
 # Shortcuts
 alias d="cd ~/Documents"
@@ -15,13 +38,6 @@ alias p="cd ~/Code"
 alias g="git"
 alias nah="git reset --hard;git clean -df;"
 alias h="history"
-
-# Vagrant Shortcuts
-alias vu="vagrant up"
-alias vp="vagrant provision"
-alias vd="vagrant destroy -f"
-alias vs="vagrant status"
-alias vssh="vagrant ssh"
 
 alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
