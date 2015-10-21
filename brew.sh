@@ -31,6 +31,7 @@ brew install gnu-sed --with-default-names
 brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
+brew install php56
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -40,7 +41,6 @@ brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
 
 #Basic System Packages
 brew install git
@@ -48,6 +48,9 @@ brew install git-lfs
 brew install rename
 brew install rhino
 brew install tree
+brew install ansible
+brew install composer
+brew install caskroom/cask/brew-cask
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
@@ -64,17 +67,28 @@ brew cask install webpquicklook
 brew cask install suspicious-package
 
 # Download OSX Apps
-brew cask install airmail
+brew tap caskroom/versions
 brew cask install alfred
 brew cask install appcleaner
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install google-hangouts
-brew cask install sublime-text
+brew cask install sublime-text3
 brew cask install superduper
-brew cask install totalfinder
+brew cask install tower
+brew cask install iterm2
 brew cask install vlc
 
 brew prune
 brew cleanup
+
+# Symlink for Sublime subl command
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+
+touch ~/.extra
+
+# Laravel and Homestead Setup
+vagrant box add laravel/homestead
+composer global require laravel/homestead --dev
+composer global require "laravel/installer=~1.1"
