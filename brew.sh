@@ -46,7 +46,6 @@ brew install homebrew/dupes/screen
 brew install git
 brew install git-lfs
 brew install rename
-brew install rhino
 brew install tree
 brew install ansible
 brew install composer
