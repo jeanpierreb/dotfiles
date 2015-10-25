@@ -6,7 +6,7 @@
 
 # Add `~/bin` to the `$PATH`
 export PATH=$HOME/bin:$PATH
-# export PATH=$HOME/.node/bin:$PATH
+export PATH=$HOME/.node/bin:$PATH
 # export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # export PATH=$PATH/usr/bin:/etc:/path/to/dir:
