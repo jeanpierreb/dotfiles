@@ -46,7 +46,6 @@ brew install homebrew/dupes/screen
 brew install git
 brew install git-lfs
 brew install rename
-brew install rhino
 brew install tree
 brew install ansible
 brew install composer
@@ -83,12 +82,8 @@ brew cask install vlc
 brew prune
 brew cleanup
 
-# Symlink for Sublime subl command
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-
 touch ~/.extra
 
 # Laravel and Homestead Setup
 vagrant box add laravel/homestead
-composer global require laravel/homestead --dev
-composer global require "laravel/installer=~1.1"
+vagrant box add ubuntu/trusty64
