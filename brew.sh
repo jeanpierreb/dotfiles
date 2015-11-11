@@ -77,6 +77,7 @@ brew cask install sublime-text3
 brew cask install superduper
 brew cask install tower
 brew cask install iterm2
+brew cask install clip-menu
 brew cask install vlc
 
 brew prune
