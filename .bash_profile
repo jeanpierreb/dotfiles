@@ -3,11 +3,11 @@
 export PATH="/usr/local/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH";
 
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-# Add `~/bin` to the `$PATH`
-#Add composer bin directory to path
-export PATH="$HOME/.composer/vendor/bin:$PATH";
+# Add `~/.composer.vendor/bin` to the `$PATH`
+export PATH="$PATH:$HOME/.composer/vendor/bin";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
