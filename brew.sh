@@ -50,6 +50,7 @@ brew install tree
 brew install ansible
 brew install composer
 brew install caskroom/cask/brew-cask
+brew install htop
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
