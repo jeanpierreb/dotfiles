@@ -78,6 +78,9 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install google-hangouts
+brew cask install firefox
+brew cask install phpstorm
+brew cask install webstorm
 brew cask install sublime-text3
 brew cask install superduper
 brew cask install tower
