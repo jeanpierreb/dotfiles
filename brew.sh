@@ -50,6 +50,7 @@ brew install git
 brew install git-lfs
 brew install rename
 brew install tree
+brew install htop
 brew install ansible
 brew install composer
 brew install caskroom/cask/brew-cask
