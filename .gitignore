@@ -11,6 +11,9 @@ Desktop.ini
 *.todo
 .vagrant
 
+#PHP Storm Project Files
+.idea
+
 # Thumbnail cache files
 ._*
 Thumbs.db
