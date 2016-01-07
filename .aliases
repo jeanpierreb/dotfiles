@@ -7,6 +7,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias c="clear" # Typing the whole word is annoying
+alias hosts="sudo vim /etc/hosts"
 
 # Laravel rules
 alias pa="php artisan"
