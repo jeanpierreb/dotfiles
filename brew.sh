@@ -89,6 +89,9 @@ brew cask install phpstorm
 brew cask install webstorm
 brew cask install sublime-text3
 brew cask install superduper
+brew cask install sketch
+brew cask install sketch-toolbox
+brew cask install sketchup
 brew cask install tower
 brew cask install iterm2
 brew cask install clipmenu
