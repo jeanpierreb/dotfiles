@@ -59,8 +59,8 @@ brew install tree
 brew install htop
 brew install ansible
 brew install composer
-brew install caskroom/cask/brew-cask
 brew install htop
+brew install caskroom/cask/brew-cask
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
@@ -86,22 +86,14 @@ brew cask install google-drive
 brew cask install google-hangouts
 brew cask install firefox
 brew cask install phpstorm
-brew cask install webstorm
 brew cask install sublime-text3
 brew cask install superduper
 brew cask install sketch
-brew cask install sketch-toolbox
-brew cask install sketchup
 brew cask install tower
 brew cask install iterm2
-brew cask install clipmenu
 brew cask install vlc
 
 brew prune
 brew cleanup
 
 touch ~/.extra
-
-# Laravel and Homestead Setup
-vagrant box add laravel/homestead
-vagrant box add ubuntu/trusty64
