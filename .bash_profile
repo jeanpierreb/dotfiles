@@ -2,6 +2,7 @@
 # Should make it so that /usr/bin is after /usr/local/bin
 export PATH="/usr/local/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH";
+export PATH="$HOME/.rvm/scripts/rvm:$PATH"
 
 
 # Add `~/bin` to the `$PATH`
@@ -46,3 +47,4 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 export PATH=/usr/local/bin:$PATH
+b
