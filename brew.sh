@@ -60,6 +60,7 @@ brew install htop
 brew install ansible
 brew install composer
 brew install htop
+brew install gnupg gnupg2
 brew install caskroom/cask/brew-cask
 brew cask install virtualbox
 brew cask install vagrant
