@@ -1,3 +1,7 @@
+# Add NVM to $PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # Experimental Brew FIX from Brew Doctor
 # Should make it so that /usr/bin is after /usr/local/bin
 export PATH="/usr/local/bin:$PATH";
