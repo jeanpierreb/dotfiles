@@ -16,6 +16,12 @@ function calc() {
 	printf "\n";
 }
 
+# Run a node module from the parent directory
+function ns() {
+	node "./node_modules/.bin/$@";
+}
+
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
