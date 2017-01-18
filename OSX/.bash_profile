@@ -1,17 +1,13 @@
 # Add NVM to $PATH
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-# Experimental Brew FIX from Brew Doctor
-# Should make it so that /usr/bin is after /usr/local/bin
 export PATH="/usr/local/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH";
-export PATH="$HOME/.rvm/scripts/rvm:$PATH"
-
-# Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-# Add `~/.composer.vendor/bin` to the `$PATH`
-export PATH="$PATH:$HOME/.composer/vendor/bin";
+export PATH="$HOME/.npm_packages/bin:$PATH";
+export PATH="$HOME/.rvm/scripts/rvm:$PATH";
+export PATH="$HOME/.composer/vendor/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.

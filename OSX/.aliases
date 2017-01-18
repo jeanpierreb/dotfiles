@@ -8,18 +8,91 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias c="clear" # Typing the whole word is annoying
 alias hosts="sudo vim /etc/hosts"
+alias showpath='echo -e ${PATH//:/\\n}'
+
+# ------------------------------------
+# Docker alias and function
+# ------------------------------------
+
+# Get latest container ID
+alias dl="docker ps -l -q"
+
+# Get container process
+alias dps="docker ps"
+
+# Get process included stop container
+alias dpa="docker ps -a"
+
+# Get images
+alias di="docker images"
+
+# Get container IP
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+# Run deamonized container, e.g., $dkd base /bin/echo hello
+alias dkd="docker run -d -P"
+
+# Run interactive container, e.g., $dki base /bin/bash
+alias dki="docker run -i -t -P"
+
+# Execute interactive container, e.g., $dex base /bin/bash
+alias dex="docker exec -i -t"
+
+# Stop all containers
+dstop() { docker stop $(docker ps -a -q); }
+
+# Remove all containers
+drm() { docker rm $(docker ps -a -q); }
+
+# Stop and Remove all containers
+alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+
+# Remove all images
+dri() { 
+    read -p "Sure you want to delete all images?" resp
+    if [ $resp = y ] ; then
+        docker rmi $(docker images -q);
+    fi
+}
+
+# Dockerfile build, e.g., $dbu tcnksm/test 
+dbu() { docker build -t=$1 .; }
+
+# Show all alias related docker
+dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+
+# Bash into running container
+dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
+
+colors () {
+   local row
+   local col
+   for row in {0..31} ; do
+       for col in {0..7} ; do
+           tput setaf $[row+col*32]
+           printf "%4d" $[row+col*32]
+           tput sgr0
+           tput setab $[row+col*32]
+           printf "%4d" $[row+col*32]
+           tput sgr0
+       done
+       echo
+   done
+}
+
+
 
 # Laravel rules
-alias pa="php artisan"
-alias par="php artisan routes"
-alias pam="php artisan migrate"
-alias pam:r="php artisan migrate:refresh"
-alias pam:roll="php artisan migrate:rollback"
-alias pam:rs="php artisan migrate:refresh --seed"
-alias pda="php artisan dumpautoload"
-alias cu="composer update"
-alias ci="composer install"
-alias cda="composer dump-autoload -o"
+# alias pa="php artisan"
+# alias par="php artisan routes"
+# alias pam="php artisan migrate"
+# alias pam:r="php artisan migrate:refresh"
+# alias pam:roll="php artisan migrate:rollback"
+# alias pam:rs="php artisan migrate:refresh --seed"
+# alias pda="php artisan dumpautoload"
+# alias cu="composer update"
+# alias ci="composer install"
+# alias cda="composer dump-autoload -o"
 
 alias v='vagrant version && vagrant global-status'
 alias vst='vagrant status'
@@ -49,8 +122,6 @@ alias opera="open -a opera"
 alias chrome="open -a /Applications/Google\ Chrome.app/"
 alias chromium="open -a chromium"
 alias f='open -a Finder'
-alias illustrator="open -a '/Applications/Adobe Illustrator CS6/Adobe Illustrator CS6.app'"
-alias photoshop="open -a '/Applications/Adobe Photoshop CS6/Adobe Photoshop CS6.app'"
 alias gpr="~/code/gpr $1"
 
 # Detect which `ls` flavor is in use
