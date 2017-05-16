@@ -39,8 +39,6 @@ brew install bash-completion2
 
 brew tap homebrew/dupes
 brew tap homebrew/versions
-brew tap homebrew/homebrew-php
-brew install php56
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -58,13 +56,9 @@ brew install rename
 brew install tree
 brew install htop
 brew install ansible
-brew install composer
 brew install htop
 brew install gnupg gnupg2
 brew install caskroom/cask/brew-cask
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install vagrant-manager
 
 #Install Quick Lookup
 brew cask install qlcolorcode
@@ -83,15 +77,11 @@ brew cask install alfred
 brew cask install appcleaner
 brew cask install dropbox
 brew cask install google-chrome
-brew cask install google-drive
 brew cask install google-hangouts
 brew cask install firefox
-brew cask install phpstorm
-brew cask install sublime-text3
 brew cask install superduper
 brew cask install sketch
-brew cask install tower
-brew cask install iterm2
+brew cask install iterm3
 brew cask install vlc
 
 brew prune
