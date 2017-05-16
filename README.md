@@ -53,5 +53,5 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ## Installation
 
 ```bash
-git clone https://github.com/jeanpierreb/dotfiles.git .dotfiles && cd .dotfiles && source bootstrap.sh
+git clone https://github.com/jeanpierreb/dotfiles.git .dotfiles/OSX && cd .dotfiles && source bootstrap.sh
 ```
