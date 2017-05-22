@@ -57,6 +57,9 @@ brew install tree
 brew install htop
 brew install ansible
 brew install htop
+brew install cowsay
+brew install lolcat
+brew install fortune
 brew install gnupg gnupg2
 brew install caskroom/cask/brew-cask
 
