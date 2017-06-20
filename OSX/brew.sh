@@ -12,7 +12,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 xcode-select --install
 
 # Install homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -55,13 +55,12 @@ brew install git-lfs
 brew install rename
 brew install tree
 brew install htop
-brew install ansible
 brew install htop
 brew install cowsay
 brew install lolcat
 brew install fortune
 brew install gnupg gnupg2
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 #Install Quick Lookup
 brew cask install qlcolorcode
@@ -83,8 +82,7 @@ brew cask install google-chrome
 brew cask install google-hangouts
 brew cask install firefox
 brew cask install superduper
-brew cask install sketch
-brew cask install iterm3
+brew cask install iterm2
 brew cask install vlc
 
 brew prune
