@@ -76,6 +76,8 @@ brew cask install suspicious-package
 # Download OSX Apps
 brew tap caskroom/versions
 brew cask install alfred
+brew cask install atom
+brew cask install visual-studio-code
 brew cask install appcleaner
 brew cask install dropbox
 brew cask install google-chrome

@@ -94,16 +94,6 @@ colors () {
 # alias ci="composer install"
 # alias cda="composer dump-autoload -o"
 
-alias v='vagrant version && vagrant global-status'
-alias vst='vagrant status'
-alias vup='vagrant up'
-alias vdo='vagrant halt'
-alias vssh='vagrant ssh'
-alias vkill='vagrant destroy'
-alias hup='homestead up'
-alias hssh='homestead ssh'
-
-
 # Shortcuts
 alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
