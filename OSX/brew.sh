@@ -86,6 +86,7 @@ brew cask install firefox
 brew cask install superduper
 brew cask install iterm2
 brew cask install vlc
+brew cask install whatsapp
 
 brew prune
 brew cleanup
