@@ -87,6 +87,9 @@ brew cask install superduper
 brew cask install iterm2
 brew cask install vlc
 brew cask install whatsapp
+brew cask install slack
+brew cask install tmux
+brew cask install zsh
 
 brew prune
 brew cleanup
