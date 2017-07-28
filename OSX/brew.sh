@@ -50,6 +50,7 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
 #Basic System Packages
+brew install python3
 brew install git
 brew install git-lfs
 brew install rename
