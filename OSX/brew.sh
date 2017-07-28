@@ -85,6 +85,7 @@ brew cask install google-hangouts
 brew cask install firefox
 brew cask install superduper
 brew cask install iterm2
+brew cask install sequel-pro
 brew cask install vlc
 brew cask install whatsapp
 brew cask install slack
