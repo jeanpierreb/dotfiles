@@ -67,9 +67,9 @@ dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 # ------------------------------------
 # Tmux Shortcuts
 
-  attach-session
-  switch-session
-  list-sessions
+alias tas="tmux a -t "
+alias tls="tmux ls"
+
 # ------------------------------------
 
 colors () {
