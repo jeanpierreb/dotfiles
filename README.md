@@ -36,7 +36,24 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 * `.bashrc`
 * `.exports`
 * `.functions`
-* `.extra` - not included, explained above
+* `.extra` - not included, explained below
+
+#### Extra file is used to store local specific stuff .extra file
+Personally I use this as a store for any custom stuff like work environment specific configurations and local aliases. What's good about this is that changes to your dotfiles don't override these changes.
+
+```
+# Git credentials
+# Not in the repository, to prevent people from accidentally committing under my name
+GIT_AUTHOR_NAME="Jean-Pierre Barthelemy"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="example@gmail.com"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+# specific aliases below
+alias funsies="fortune | cowsay | lolcat";
+```
 
 #### manual run
 * `.osx` - run on a fresh osx machine
