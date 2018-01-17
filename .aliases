@@ -107,7 +107,8 @@ alias chrome="open -a /Applications/Google\ Chrome.app/"
 alias chromium="open -a chromium"
 alias f='open -a Finder'
 alias gpr="~/code/gpr $1"
-
+alias port_fwd="ssh -L 9000:localhost:8000 dev-dsk-bartjean-2c-0f0d2b5c.us-west-2.amazon.com"
+alias ichrome='"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --user-data-dir=${HOME}/.dev-chrome --disable-web-security'
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
