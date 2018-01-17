@@ -70,6 +70,6 @@ alias funsies="fortune | cowsay | lolcat";
 ## Installation
 
 ```bash
-git clone git@github.com:jeanpierreb/dotfiles.git .dotfiles && cd .dotfiles/OSX && source bootstrap.sh
+git clone git@github.com:jeanpierreb/dotfiles.git .dotfiles && cd .dotfiles && source bootstrap.sh
 ```
 
