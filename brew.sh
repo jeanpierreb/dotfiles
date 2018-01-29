@@ -1,19 +1,5 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
-
-# Ask for the administrator password upfront.
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-# Install X-Code command line utilities
-xcode-select --install
-
-# Install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 # Make sure we’re using the latest Homebrew.
 brew update
 
@@ -73,27 +59,18 @@ brew cask install quicklook-csv
 brew cask install betterzipql
 brew cask install webpquicklook
 brew cask install suspicious-package
+brew cask install iterm2
 
 # Download OSX Apps
 brew tap caskroom/versions
 brew cask install alfred
-brew cask install atom
 brew cask install visual-studio-code
-brew cask install appcleaner
 brew cask install dropbox
 brew cask install google-chrome
-brew cask install google-hangouts
-brew cask install firefox
-brew cask install superduper
-brew cask install iterm2
-brew cask install sequel-pro
 brew cask install vlc
 brew cask install whatsapp
-brew cask install slack
 brew cask install tmux
 brew cask install zsh
-
 brew prune
 brew cleanup
 
-touch ~/.extra

@@ -97,6 +97,7 @@ alias g="git"
 alias nah="git reset --hard;git clean -df;"
 alias h="history"
 
+alias bootstrap="source ~/.dotfiles/bootstrap.sh"
 alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
