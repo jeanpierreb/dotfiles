@@ -48,14 +48,14 @@ drm() { docker rm $(docker ps -a -q); }
 alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 # Remove all images
-dri() { 
+dri() {
     read -p "Sure you want to delete all images?" resp
     if [ $resp = y ] ; then
         docker rmi $(docker images -q);
     fi
 }
 
-# Dockerfile build, e.g., $dbu tcnksm/test 
+# Dockerfile build, e.g., $dbu tcnksm/test
 dbu() { docker build -t=$1 .; }
 
 # Show all alias related docker
@@ -96,6 +96,7 @@ alias p="cd ~/Code"
 alias g="git"
 alias nah="git reset --hard;git clean -df;"
 alias h="history"
+alias reb="git pull --rebase"
 
 alias bootstrap="source ~/.dotfiles/bootstrap.sh"
 alias preview="open -a '$PREVIEW'"
