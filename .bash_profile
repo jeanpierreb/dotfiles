@@ -6,9 +6,13 @@ export PATH="/usr/local/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH";
 export PATH="$HOME/bin:$PATH";
 export PATH="$HOME/.npm_packages/bin:$PATH";
-export PATH="$HOME/.rvm/scripts/rvm:$PATH";
-export PATH="/apollo/env/SDETools/bin:$PATH";
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)";
+
+# Add Visual Studio Code to Path
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH";
+
+# export PATH="/apollo/env/SDETools/bin:$PATH";
+# export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)";
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.

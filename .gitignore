@@ -5,13 +5,7 @@
 .DS_Store
 Desktop.ini
 
-#Sublime Project Files
-*.sublime-project
-*.sublime-workspace
-*.todo
-.vagrant
-
-#PHP Storm Project Files
+#IntelliJ Project Files
 .idea
 
 # Thumbnail cache files

@@ -35,18 +35,19 @@ brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
-#Basic System Packages
+# System Packages
 brew install python3
 brew install git
 brew install git-lfs
 brew install rename
 brew install tree
 brew install htop
-brew install htop
 brew install cowsay
 brew install lolcat
 brew install fortune
 brew install gnupg gnupg2
+
+# Setup Brew Cask
 brew tap caskroom/cask
 
 #Install Quick Lookup
@@ -71,6 +72,8 @@ brew cask install vlc
 brew cask install whatsapp
 brew cask install tmux
 brew cask install zsh
+
+# Wrapping up
 brew prune
 brew cleanup
 
