@@ -23,7 +23,6 @@ brew install gnu-sed --with-default-names
 brew install bash
 brew install bash-completion2
 
-brew tap homebrew/dupes
 brew tap homebrew/versions
 
 # Install `wget` with IRI support.
@@ -31,9 +30,9 @@ brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+brew install grep
+brew install openssh
+brew install screen
 
 # System Packages
 brew install python3
@@ -57,7 +56,10 @@ brew cask install qlmarkdown
 brew cask install quicklook-json
 brew cask install qlprettypatch
 brew cask install quicklook-csv
-brew cask install betterzipql
+brew cask install qlcolorcode
+brew cask install qlimagesize
+brew cask install quicklookase
+brew cask install qlvideo
 brew cask install webpquicklook
 brew cask install suspicious-package
 brew cask install iterm2
