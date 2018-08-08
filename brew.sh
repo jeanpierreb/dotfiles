@@ -72,8 +72,9 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install vlc
 brew cask install whatsapp
-brew cask install tmux
-brew cask install zsh
+brew install tmux
+brew install zsh
+brew install rsync
 
 # Wrapping up
 brew prune
