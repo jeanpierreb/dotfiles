@@ -4,7 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Homebrew directory
 export PATH=/opt/homebrew/sbin:/opt/homebrew/bin:$PATH
 
-
+# NPM directory
 export PATH=$HOME/.npm-global/bin:$PATH
 
 # Add pyenv, a python version  manager to PATH
