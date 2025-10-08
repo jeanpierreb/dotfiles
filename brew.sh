@@ -45,7 +45,6 @@ brew install webpquicklook
 brew install suspicious-package
 
 # Download OSX Apps
-brew tap homebrew/cask-versions
 brew install --cask alfred
 brew install --cask dropbox
 brew install --cask google-chrome
