@@ -1,0 +1,148 @@
+# ~/.config/git/config
+
+[alias]
+  # Abbrev log
+  l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+  # Short status
+  s = status -s
+
+  # Diff vs HEAD (clear screen if there are changes)
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+  # Diff N commits back
+  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+
+  # Pull & update submodules (recursive, track remotes)
+  p = !"git pull --ff-only && git submodule update --init --recursive --remote"
+
+  # Clone with submodules
+  c = clone --recursive
+
+  # Commit all
+  ca = !git add -A && git commit -av
+
+  # Switch to branch (create if needed) — uses modern 'switch'
+  go = "!f() { git switch -c \"$1\" 2>/dev/null || git switch \"$1\"; }; f"
+
+  # Lists
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
+  # Amend staged into last commit (reuse message)
+  amend = commit --amend --reuse-message=HEAD
+
+  # Credit an author on latest commit
+  credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+
+  # Interactive rebase last N
+  reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+  # Retag latest commit
+  retag = "!r() { git tag -d \"$1\" && git push origin :refs/tags/\"$1\" && git tag \"$1\"; }; r"
+
+  # Find branches containing a commit
+  fb = "!f() { git branch -a --contains \"$1\"; }; f"
+
+  # Find tags containing a commit
+  ft = "!f() { git describe --always --contains \"$1\"; }; f"
+
+  # Find commits by source code
+  fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S\"$1\"; }; f"
+
+  # Find commits by message
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=\"$1\"; }; f"
+
+  # Delete branches already merged into the repo’s default branch
+  dm = "!f(){ b=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null | sed 's@^origin/@@'); b=${b:-main}; git branch --merged \"$b\" | grep -v '\\*' | xargs -n1 git branch -d; }; f"
+
+  # Merge a GitHub PR on top of default branch (works with main or master)
+  mpr = "!f() { \
+    pr=\"$1\"; \
+    b=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null | sed 's@^origin/@@'); b=${b:-main}; \
+    case \"$pr\" in \
+      (''|*[!0-9]*) echo 'usage: git mpr <PR_NUMBER>' >&2; exit 1;; \
+    esac; \
+    git fetch origin refs/pull/$pr/head:pr/$pr && \
+    git rebase \"$b\" pr/$pr && \
+    git switch \"$b\" && \
+    git merge pr/$pr && \
+    git branch -D pr/$pr && \
+    git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$pr.\"; \
+  }; f"
+
+[apply]
+  whitespace = fix
+
+[core]
+  # If you keep these files in XDG paths, update the targets accordingly:
+  # e.g., ~/.config/git/ignore and ~/.config/git/attributes
+  excludesfile = ~/.config/git/ignore
+  attributesfile = ~/.config/git/attributes
+
+  # macOS/APFS prefers precomposed Unicode; safe default is true
+  precomposeunicode = true
+
+  # Safer mtime handling on macOS; default is fine, so you can drop this.
+  # trustctime = false
+
+  # Tighter whitespace rules
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local   = yellow
+  remote  = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old  = red
+  new  = green
+
+[color "status"]
+  added     = yellow
+  changed   = green
+  untracked = cyan
+
+[diff]
+  renames = copies
+
+[help]
+  autocorrect = 1
+
+[merge]
+  log = true
+
+[pull]
+  # Avoid surprise merge commits; change to 'true' if you prefer rebase
+  ff = only
+
+[push]
+  # Modern default behavior
+  default = simple
+
+[init]
+  # New repos will start with 'main'
+  defaultBranch = main
+
+# URL shorthands (SSH preferred; git:// is deprecated)
+[url "git@github.com:"]
+  insteadOf = gh:
+  pushInsteadOf = github:
+  # (Avoid git://; GitHub disabled it)
+  # pushInsteadOf = git://github.com/
+
+[url "https://github.com/"]
+  insteadOf = github:
+
+[url "git@gist.github.com:"]
+  insteadOf = gst:
+  pushInsteadOf = gist:
+
+[url "https://gist.github.com/"]
+  insteadOf = gist:
