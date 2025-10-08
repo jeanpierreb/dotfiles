@@ -1,18 +1,28 @@
 #!/bin/zsh
+set -e
+
+print "Updating and installing Homebrew packges."
 
 # Make sure we’re using the latest Homebrew.
-brew update
-
-# Upgrade any already-installed formulae.
-brew upgrade
+brew update && brew upgrade && brew cleanup
 
 # Install more recent versions of some OS X tools.
 brew install moreutils
-brew install nvim
+brew install neovim
 brew install grep
 brew install openssh
 brew install screen
 brew install wget
+
+# TS, JS, and Node
+# brew install deno
+# brew install node
+# brew install n
+# brew install yarn
+# brew install pnpm
+
+
+#neovim docker
 
 # System Packages
 brew install python3

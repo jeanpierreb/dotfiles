@@ -1,39 +1,9 @@
-```
-                      .___      __    _____.__.__
-                    __| _/_____/  |__/ ____\__|  |   ____   ______
-                   / __ |/  _ \   __\   __\|  |  | _/ __ \ /  ___/
-                  / /_/ (  <_> )  |  |  |  |  |  |_\  ___/ \___ \
-                  \____ |\____/|__|  |__|  |__|____/\___  >____  >
-                       \/                               \/     \/
-
-            This repository contains personal dotfiles of Jean-Pierre
-```
-
 This repo contains my personal dotfiles and are heavily influenced by [Addy Osmani](https://github.com/addyosmani/dotfiles)'s, [Paul Irish](https://github.com/paulirish/dotfiles/)'s, and [Mathias](https://github.com/mathiasbynens/dotfiles/)'s.
 
-## Some differences
-
-Launch Applications:
-Browsers, Text Editors, and more..
-
-Remove curlrc because of known conflict with homebrew.
-
-
-### Sensible OS X defaults
-
-When setting up a new Mac, you may want to set some sensible OS X defaults:
-
-```bash
-./.osx
-```
-
-## overview of files
+## Overview of files
 
 #### shell environement
 * `.aliases`
-* `.bash_profile`
-* `.bash_prompt`
-* `.bashrc`
 * `.exports`
 * `.functions`
 * `.extra` - not included, explained below
@@ -44,7 +14,7 @@ Personally I use this as a store for any custom stuff like work environment spec
 ```
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
-GIT_AUTHOR_NAME="Jean-Pierre Barthelemy"
+GIT_AUTHOR_NAME="YOUR_NAME_HERE"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
 GIT_AUTHOR_EMAIL="example@gmail.com"
