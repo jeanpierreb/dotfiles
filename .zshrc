@@ -13,6 +13,11 @@ eval "$(pyenv init --path)"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/onramp/.oh-my-zsh
 
+# Load my personal exports 
+if [ -f ~/.exports ]; then
+  source ~/.exports
+fi
+
 # Load my personal aliases (override Oh My Zsh defaults)
 if [ -f ~/.aliases ]; then
   source ~/.aliases
@@ -23,10 +28,6 @@ if [ -f ~/.functions ]; then
   source ~/.functions
 fi
 
-# Load my personal exports 
-if [ -f ~/.exports ]; then
-  source ~/.exports
-fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-export EDITOR='vim'
+# export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -123,4 +124,3 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias remove_zlib="rename -D \" (z-lib.org)\" ./*"
