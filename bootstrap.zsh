@@ -8,7 +8,7 @@ echo "Now in: $PWD"
 git pull origin master
 
 doIt() {
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.zsh" \
         --exclude "README.md" --exclude "LICENSE" --exclude "bin/" \
         --exclude "brew.sh" --exclude "init/" \
         -avh --no-perms . ~
