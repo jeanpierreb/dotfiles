@@ -11,12 +11,12 @@ export PATH=$HOME/.npm-global/bin:$PATH
 eval "$(pyenv init --path)"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/onramp/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Load my personal exports 
-if [ -f ~/.exports ]; then
-  source ~/.exports
-fi
+# if [ -f ~/.exports ]; then
+#   source ~/.exports
+# fi
 
 # Load my personal aliases (override Oh My Zsh defaults)
 if [ -f ~/.aliases ]; then

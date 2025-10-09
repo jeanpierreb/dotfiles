@@ -1,5 +1,8 @@
-#!/usr/bin/env bash
-cd "$(dirname "${BASH_SOURCE}")"
+#!/usr/bin/env zsh
+# cd "$(dirname "${BASH_SOURCE}")"
+cd {0:A:h}
+echo "Now in: $PWD"
+
 git pull origin master
 
 function doIt() {
