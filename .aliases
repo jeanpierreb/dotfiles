@@ -1,4 +1,4 @@
-alias vim="nvim"
+# alias vim="nvim"
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias hosts="sudo vim /etc/hosts"
 alias showpath='echo -e ${PATH//:/\\n}'
