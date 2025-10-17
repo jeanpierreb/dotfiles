@@ -77,7 +77,7 @@ alias h="history"
 alias reb="git pull --rebase"
 
 alias bootstrap="source ~/.dotfiles/bootstrap.sh"
-alias preview="open -a '$PREVIEW'"
+# alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
 alias safari="open -a safari"
