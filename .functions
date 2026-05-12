@@ -21,6 +21,24 @@ function calc() {
 # 	node "./node_modules/.bin/$@";
 # }
 
+function docker-hard-reset() {
+  set -e
+
+    dry_run=false
+
+# Parse args
+    if [[ "$1" == "--dry-run" ]]; then
+      dry_run=true
+      echo "🔍 Dry run mode: No deletions will occur."
+    fi
+
+    docker stop $(docker ps -aq)
+    docker rm -f $(docker ps -aq)
+    docker rmi -f $(docker images -aq)
+    docker volume rm $(docker volume ls -q)
+    docker network rm $(docker network ls -q)
+    docker builder prune -af
+}
 
 # Create a new directory and enter it
 function mkd() {
@@ -109,14 +127,6 @@ function server() {
 	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port";
 }
 
-# Start a PHP server from a directory, optionally specifying the port
-# (Requires PHP 5.4.0+.)
-function phpserver() {
-	local port="${1:-4000}";
-	local ip=$(ipconfig getifaddr en1);
-	sleep 1 && open "http://${ip}:${port}/" &
-	php -S "${ip}:${port}";
-}
 
 # Compare original and gzipped file size
 function gz() {
@@ -210,16 +220,6 @@ function s() {
 		subl .;
 	else
 		subl "$@";
-	fi;
-}
-
-# `a` with no arguments opens the current directory in Atom Editor, otherwise
-# opens the given location
-function a() {
-	if [ $# -eq 0 ]; then
-		atom .;
-	else
-		atom "$@";
 	fi;
 }
 

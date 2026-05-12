@@ -3,14 +3,6 @@
 alias hosts="sudo vim /etc/hosts"
 alias showpath='echo -e ${PATH//:/\\n}'
 
-# ------------------------------------
-# Tmux Shortcuts
-
-# alias tas="tmux a -t "
-# alias tls="tmux ls"
-
-# ------------------------------------
-
 # Shortcuts
 alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
