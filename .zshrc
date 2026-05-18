@@ -13,6 +13,9 @@ eval "$(pyenv init --path)"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Claude PATH
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin"
 # Load my personal exports 
 # if [ -f ~/.exports ]; then
 #   source ~/.exports
