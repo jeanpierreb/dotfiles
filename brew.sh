@@ -15,10 +15,11 @@ brew install openssh
 brew install screen
 brew install wget
 brew install docker
+brew install tor
 
 # TS, JS, and Node
-# brew install deno
-# brew install node
+brew install deno
+brew install node
 # brew install n
 # brew install yarn
 # brew install pnpm
@@ -44,7 +45,6 @@ brew install --cask alfred
 brew install --cask dropbox
 brew install --cask google-chrome
 brew install --cask firefox
-brew install --cask tor
 brew install --cask vlc
 brew install --cask tmux
 brew install --cask obsidian
@@ -55,6 +55,7 @@ brew install --cask logi-options+
 brew install --cask claude
 brew install --cask claude-code
 brew install --cask affinity
+brew install --cask 1password
 
 # Wrapping up
 brew cleanup
