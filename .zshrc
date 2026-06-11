@@ -23,7 +23,38 @@ eval "$(pyenv init --path)"
 # ─── oh-my-zsh ────────────────────────────────────────────────
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git node)
+plugins=(
+  # Version Control
+  git
+
+  # Cloud & Infrastructure
+  docker
+  docker-compose
+  kubectl
+  helm
+  terraform
+  aws
+  ansible
+
+  # Programming Languages & Tools
+  python
+  pip
+  node
+  npm
+  yarn
+  golang
+
+  # Productivity Boosters
+  sudo              # Press ESC twice to add sudo to previous command
+  extract           # Universal archive extractor (works with .tar, .zip, .gz, etc.)
+  z                 # Jump to frequently used directories
+  history           # Enhanced history commands
+  command-not-found # Suggests package to install for missing commands
+
+  # Community Plugins (must be last)
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 source $ZSH/oh-my-zsh.sh
 
 # ─── Personal config ──────────────────────────────────────────

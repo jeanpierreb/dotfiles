@@ -20,10 +20,6 @@ brew install tor
 # TS, JS, and Node
 brew install deno
 brew install node
-# brew install n
-# brew install yarn
-# brew install pnpm
-
 
 #neovim docker
 
@@ -40,6 +36,7 @@ brew install qlmarkdown
 brew install suspicious-package
 
 # Download OSX Apps
+brew install --cask 1password
 brew install --cask quicklook-video
 brew install --cask alfred
 brew install --cask dropbox
@@ -55,7 +52,6 @@ brew install --cask logi-options+
 brew install --cask claude
 brew install --cask claude-code
 brew install --cask affinity
-brew install --cask 1password
 
 # Wrapping up
 brew cleanup
