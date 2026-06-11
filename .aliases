@@ -2,67 +2,12 @@
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias hosts="sudo vim /etc/hosts"
 alias showpath='echo -e ${PATH//:/\\n}'
-alias remove_zlib="rename -D \" (z-lib.org)\" ./*"
-
-# ------------------------------------
-# Docker alias and function
-# ------------------------------------
-
-# Get latest container ID
-alias dl="docker ps -l -q"
-
-# Get container process
-alias dps="docker ps"
-
-# Get process included stop container
-alias dpa="docker ps -a"
-
-# Get images
-alias di="docker images"
-
-# Get container IP
-alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-
-# Run deamonized container, e.g., $dkd base /bin/echo hello
-alias dkd="docker run -d -P"
-
-# Run interactive container, e.g., $dki base /bin/bash
-alias dki="docker run -i -t -P"
-
-# Execute interactive container, e.g., $dex base /bin/bash
-alias dex="docker exec -i -t"
-
-# Stop all containers
-dstop() { docker stop $(docker ps -a -q); }
-
-# Remove all containers
-drm() { docker rm $(docker ps -a -q); }
-
-# Stop and Remove all containers
-alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
-
-# Remove all images
-dri() {
-    read -p "Sure you want to delete all images?" resp
-    if [ $resp = y ] ; then
-        docker rmi $(docker images -q);
-    fi
-}
-
-# Dockerfile build, e.g., $dbu tcnksm/test
-dbu() { docker build -t=$1 .; }
-
-# Show all alias related docker
-dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
-
-# Bash into running container
-dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
 # ------------------------------------
 # Tmux Shortcuts
 
-alias tas="tmux a -t "
-alias tls="tmux ls"
+# alias tas="tmux a -t "
+# alias tls="tmux ls"
 
 # ------------------------------------
 
@@ -71,10 +16,7 @@ alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
-alias g="git"
-alias nah="git reset --hard;git clean -df;"
 alias h="history"
-alias reb="git pull --rebase"
 
 alias bootstrap="source ~/.dotfiles/bootstrap.zsh"
 # alias preview="open -a '$PREVIEW'"
