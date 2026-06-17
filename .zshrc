@@ -61,3 +61,6 @@ source $ZSH/oh-my-zsh.sh
 # ─── Personal config ──────────────────────────────────────────
 [ -f ~/.aliases ]   && source ~/.aliases
 [ -f ~/.functions ] && source ~/.functions
+
+# ─── Env Vars ─────────────────────────────────────────────────
+[ -f ~/.env ] && source ~/.env
