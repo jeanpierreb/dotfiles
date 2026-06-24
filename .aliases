@@ -21,7 +21,13 @@ alias chrome="open -a /Applications/Google\ Chrome.app/"
 alias chromium="open -a chromium"
 alias f='open -a Finder'
 
-# Detect
+# Detect colorflag: macOS uses -G, Linux uses --color
+if ls --color > /dev/null 2>&1; then
+  colorflag="--color"
+else
+  colorflag="-G"
+fi
+
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
