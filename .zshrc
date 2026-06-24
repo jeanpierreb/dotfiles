@@ -40,7 +40,6 @@ plugins=(
   # Programming Languages & Tools
   python
   pip
-  tmux
   node
   npm
   yarn

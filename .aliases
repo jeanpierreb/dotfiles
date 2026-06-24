@@ -87,3 +87,12 @@ alias spoton="sudo mdutil -a -i on"
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# Tmux
+alias t="tmux"
+alias ta="tmux attach -t"
+alias tad="tmux attach -d -t"
+alias tn="tmux new -s"
+alias tl="tmux ls"
+alias tk="tmux kill-session -t"
+alias tka="tmux kill-server"
+
