@@ -31,15 +31,13 @@ plugins=(
   # Cloud & Infrastructure
   docker
   docker-compose
-  kubectl
-  helm
   terraform
   aws
-  ansible
 
   # Programming Languages & Tools
   python
   pip
+  tmux
   node
   npm
   yarn
