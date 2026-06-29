@@ -7,6 +7,7 @@ alias showpath='echo -e ${PATH//:/\\n}'
 alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
+alias Dropbox="cd ~/Dropbox"
 alias p="cd ~/Projects"
 alias h="history"
 
